@@ -1,13 +1,20 @@
 #workout
-  %p= @workout.date.strftime("%A, %B %d")
-  %p= @workout.workout
-  %p= @workout.mood
-  %p= @workout.length
+  %h2= @workout.date.strftime("%A, %B %d")
+  %h3
+    %p 
+    %span Workout:
+    = @workout.workout
+    %p 
+    %span Mood:
+    = @workout.mood
+    %p 
+    %span Workout:
+    = @workout.length
 
 #exercises
   %h2 Exercises
   = render @workout.exercises
-
+  %hr/
   %h3 Add an exercise
   = render "exercises/form"
 
